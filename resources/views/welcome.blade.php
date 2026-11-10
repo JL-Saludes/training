@@ -85,12 +85,12 @@
             <tbody>
                 @foreach ($programs as $program)
                 <tr>
-                    <td>{{ $program['code'] }}</td>
-                    <td>{{ $program['name'] }}</td>
-                    <td>{{ $program['college'] }}</td>
-                    <td>{{ $program['slots'] }}</td>
+                    <td>{{ $program->code }}</td>
+                    <td>{{ $program->name }}</td>
+                    <td>{{ $program->college }}</td>
+                    <td>{{ $program->slot }}</td>
                     <td>
-                        @if ($program['is_active'])
+                        @if ($program->is_active)
                             <span class="badge bg-success">Offered</span>
                         @else
                             <span class="badge bg-danger">Not Offered</span>

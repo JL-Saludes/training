@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
+            $table->string('code', 20)->unique();
+            $table->string('name');
+            $table->text('college')->nullable();
+            $table->unsignedInteger('slot')->default(0);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

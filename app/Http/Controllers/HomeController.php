@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Program;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,14 +13,7 @@ class HomeController extends Controller
         $name = '';
         $age = '';
 
-        $programs =[
-            ['id' => 1, 'code' => 'BSCS', 'name' => 'BS Computer Science', 'college' => 'College of Computing', 'slots' => 50, 'is_active' => 1],
-            ['id' => 2, 'code' => 'BSIT', 'name' => 'BS Information Technology', 'college' => 'College of Computing', 'slots' => 40, 'is_active' => 1],
-            ['id' => 3, 'code' => 'BSIS', 'name' => 'BS Information Systems', 'college' => 'College of Computing', 'slots' => 45, 'is_active' => 0],
-            ['id' => 4, 'code' => 'BSEntrep', 'name' => 'BS Entrepreneurship', 'college' => 'College of Business', 'slots' => 60, 'is_active' => 1],
-            ['id' => 5, 'code' => 'BSTM', 'name' => 'BS Tourism Management', 'college' => 'College of Tourism', 'slots' => 75, 'is_active' => 1],
-            
-        ];
+        $programs = Program::all();
 
         return view('welcome', compact('name', 'age', 'programs'));
     }
