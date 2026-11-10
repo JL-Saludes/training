@@ -3,7 +3,6 @@
 @section('title', 'Apply for admission')
 
 @section('content')
-  <x-alert type="success">
-    Welcome to the Admission System!
-  </x-alert>
+  <h1>Apply for Admission</h1>
+  <p>please fill up the form</p>
 @endsection

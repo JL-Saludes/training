@@ -5,10 +5,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Middleware\CheckAdmissionPeriod;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/apply', [HomeController::class, 'apply'])->name('apply');
+Route::get('/apply', [HomeController::class, 'apply'])->name('apply')->middleware(CheckAdmissionPeriod::class);
 
 Route::get('/sampleform', [HomeController::class, 'sampleform'])->name('sampleform');
 
