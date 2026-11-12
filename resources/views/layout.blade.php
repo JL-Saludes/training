@@ -20,11 +20,14 @@
 
     <main class="container py-4">
         
+        
         @include('partials.flash')
 
+        {{--
         @section('sidebar')
             This is main sidebar.        
         @show
+        --}}
 
         @yield('content')
     </main>

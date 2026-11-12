@@ -15,9 +15,12 @@
         <ul class="nav navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('home')}}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
           </li>
         </ul>
       </div>
+
+
     </dialog>
   </div>
 </nav>
